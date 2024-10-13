@@ -13,7 +13,7 @@ async function checkWeather(city = "Dombivli") {
   const data = await response.json();
 
   if (data.name == undefined) {
-    alert("City is not found");
+    alert("City not found");
   } 
   else {
      setTimeout(() => {
