@@ -49,6 +49,9 @@ async function checkWeather(city = "Dombivli") {
     else if (data.weather[0].main == "Drizzle") {
       weatherImage.src = "images/drizzle.png";
     }
+    else if (data.weather[0].main == "Thunderstorm") {
+      weatherImage.src = "images/thunderstorm.png";
+    }
   }
 }
 
