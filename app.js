@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function checkWeather(city = "Dombivli") {
   const response = await fetch(API_URL + city + `&appid=${API_KEY}`);
   const data = await response.json();
-
+  console.log(data);
   if(data.name == undefined) {
     alert("City not found");
   } 
@@ -26,6 +26,7 @@ async function checkWeather(city = "Dombivli") {
       document.querySelector("#humadity").innerHTML = data.main.humidity + "%";
       document.querySelector("#wind").innerHTML = data.wind.speed + " km/h";
       document.querySelector('#weather-info').innerHTML = data.weather[0].main;
+      document.querySelector('#des').innerHTML = "Description : " + data.weather[0].description;
     }, 200);
 
     if (data.weather[0].main == "Clouds") {
