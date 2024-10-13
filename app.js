@@ -25,6 +25,7 @@ async function checkWeather(city = "Dombivli") {
         Math.round(data.main.temp) + "°C";
       document.querySelector("#humadity").innerHTML = data.main.humidity + "%";
       document.querySelector("#wind").innerHTML = data.wind.speed + " km/h";
+      document.querySelector('#weather-info').innerHTML = data.weather[0].main;
     }, 200);
 
     if (data.weather[0].main == "Clouds") {

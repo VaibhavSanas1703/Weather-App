@@ -79,7 +79,7 @@ button svg{
      align-items: center;
      gap: 5px;
      user-select: none;
-     margin-top: 20px;
+     margin-top: 5px;
 }
 
 .temp-container h1{
@@ -92,6 +92,11 @@ button svg{
 
 .weather-image{
      margin: 10px 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
 }
 
 .weather-image img{
