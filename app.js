@@ -17,7 +17,9 @@ async function checkWeather(city = "Dombivli") {
     alert("City is not found");
   } 
   else {
-     searchInput.value = '';
+     setTimeout(() => {
+          searchInput.value = '';
+     },200)
     setTimeout(() => {
       document.querySelector("#city").innerHTML = data.name;
       document.querySelector("#temp").innerHTML =
