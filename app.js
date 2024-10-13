@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 async function checkWeather(city = "Dombivli") {
   const response = await fetch(API_URL + city + `&appid=${API_KEY}`);
   const data = await response.json();
-  console.log(data);
 
   if (data.name == undefined) {
     alert("City is not found");
